@@ -8,7 +8,7 @@ chmod 0600 /root/.ssh/id_rsa
 # chmod +x /usr/bin/cloudflared
 
 echo "Host *" >>/root/.ssh/config
-echo "    ProxyCommand /usr/bin/cloudflared access ssh --hostname %h --service-token-id '${ID}' --secret '${TOKEN}'" >>/root/.ssh/config
+echo "    ProxyCommand /usr/bin/cloudflared access ssh --hostname %h --service-token-id '${ID}' --secret '${SECRET}'" >>/root/.ssh/config
 
 cat /root/.ssh/config
 if [ -z "${HOST_FINGERPRINT}" ]; then
