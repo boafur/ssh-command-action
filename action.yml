@@ -22,6 +22,10 @@ inputs:
     description: "command to be executed"
     required: false
     default: "echo 'Hello world'"
+  service_token_id:
+    description: "The Client ID of the Cloudflare service token"
+  service_token_secret:
+    description: "The Client Secret of the Cloudflare service token"
 
 runs:
   using: "docker"
@@ -33,6 +37,8 @@ runs:
     PRIVATE_KEY: ${{ inputs.private_key }}
     HOST_FINGERPRINT: ${{ inputs.host_fingerprint }}
     COMMAND: ${{ inputs.command }}
+    ID: ${{ inputs.service_token_id }}
+    SECRET: ${{ inputs.service_token_secret }}
 
 branding:
   icon: "terminal"
