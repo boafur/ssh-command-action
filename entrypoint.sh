@@ -19,5 +19,7 @@ else
   echo "${HOST_FINGERPRINT}" >/root/.ssh/known_hosts
 fi
 
+cat /root/.ssh/config
+
 # Execute the command
 ssh -o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=+ssh-rsa -o HostKeyAlgorithms=+ssh-rsa "${USER}@cfhost" -vvvv -p ${PORT} ${COMMAND}
