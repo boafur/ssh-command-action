@@ -20,4 +20,4 @@ else
 fi
 
 # Execute the command
-ssh -o StrictHostKeyChecking=yes "${USER}@cfhost" -p ${PORT} ${COMMAND}
+ssh -o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=+ssh-rsa -o HostKeyAlgorithms=+ssh-rsa "${USER}@cfhost" -p ${PORT} ${COMMAND}
