@@ -20,4 +20,4 @@ else
 fi
 
 # Execute the command
-ssh -o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=+ssh-rsa -o HostKeyAlgorithms=+ssh-rsa -i /root/.ssh/id_rsa "${USER}@${HOST}" -vvvv -p ${PORT} ${COMMAND}
+ssh -o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=+ssh-rsa -o HostKeyAlgorithms=+ssh-rsa -i /root/.ssh/id_rsa "${USER}@${HOST}" -v -p ${PORT} ${COMMAND}
