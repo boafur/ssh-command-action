@@ -4,8 +4,8 @@ mkdir /root/.ssh
 echo "$PRIVATE_KEY" >/root/.ssh/id_rsa # works even if key is not rsa kind
 chmod 0600 /root/.ssh/id_rsa
 
-wget -O /usr/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
-chmod +x /usr/bin/cloudflared
+# wget -O /usr/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+# chmod +x /usr/bin/cloudflared
 
 echo "Host cfhost" >>/root/.ssh/config
 echo "    HostName ${HOST}"
